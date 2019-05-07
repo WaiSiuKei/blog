@@ -1,0 +1,25 @@
+language: node_js
+node_js: stable
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "waisiukei"
+  - git config user.email "wakiki@outlook.com"
+  - git add .
+  - git commit -m "Update"
+  - git push --force --quiet "https://${GitHub_token}@${GH_REF}" master:master
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com/WaiSiuKei/waisiukei.github.io.git
