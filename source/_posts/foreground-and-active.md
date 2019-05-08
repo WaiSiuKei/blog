@@ -11,7 +11,7 @@ tags: 脑洞
 
 HTML Standard 有个章节是讲 Focus 的，并且提供了一个相关的`document.activeElement`，利用这个API，可以知道用户正在交互的元素。但是现在的页面开发不是基于HTMLElement，而是基于某某框架的组件，问题是好像并没有哪个框架会提供`app.activeComponent`这样的API。
 
-传统的 Windows GUI 开发中，有两个概念——`foreground`和`active`。传统的窗口叠窗口模式里，很容易区分用户的交互焦点，因为最前面的就是`active`的；而`foreground`/`background`是和线程有关。在浏览器单线程世界里，任务的执行没有`foreground`/`background`之分，，但是UI里，是可以有`foreground`/`background`组件。比如，弹出的对话框，天猫右滑出来的购物车组建，对于整个页面来说，是`foreground`。我想，`z-index`是判断`foreground`/`background`的依据。然后像<input>，一般`z-index`不变，但用户可以通过鼠标点击，实现`focus`/`blur`，从而影响倒页面的活动元素。
+传统的 Windows GUI 开发中，有两个概念——`foreground`和`active`。传统的窗口叠窗口模式里，很容易区分用户的交互焦点，因为最前面的就是`active`的；而`foreground`/`background`是和线程有关。在浏览器单线程世界里，任务的执行没有`foreground`/`background`之分，，但是UI里，是可以有`foreground`/`background`组件。比如，弹出的对话框，天猫右滑出来的购物车组建，对于整个页面来说，是`foreground`。我想，`z-index`是判断`foreground`/`background`的依据。然后像`<input>`，一般`z-index`不变，但用户可以通过鼠标点击，实现`focus`/`blur`，从而影响倒页面的活动元素。
 
 目前项目里的代码，只判断了`document.activeElement`这种情况，也就是只考虑了`active`，但是`foreground`是没有处理的，所以往后应该潜在的问题。
 
