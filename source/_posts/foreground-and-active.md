@@ -1,9 +1,8 @@
 ---
-title: foreground-and-active
+title: Foreground and Active
 date: 2019-05-08 20:58:53
 tags: 脑洞
 ---
-# Foreground and Active
 
 最近收到一个需求，需要参（抄）考（袭）传统盯盘软件，当用户处于行情页面时，无需点击”输入代码“之类的`<input>`，只要在键盘按下一个键，就有一个股票代码搜索提示弹出来，供用户选中需要查看的股票。
 
