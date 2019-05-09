@@ -99,7 +99,7 @@ deploy:
 sitemap:
     path: sitemap.xml
 baidusitemap:
-    path: baidusitemap.xm
+    path: baidusitemap.xml
 
 feed:
     type: atom

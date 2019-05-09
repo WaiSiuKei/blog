@@ -9,6 +9,7 @@ script:
   - hexo g
 
 after_script:
+  - cp googlee736c0dd9c0ecb13.html ./public/googlee736c0dd9c0ecb13.html
   - cd ./public
   - git init
   - git config user.name "waisiukei"
