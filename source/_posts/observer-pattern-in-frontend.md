@@ -26,7 +26,7 @@ process.on('uncaughtexception', fn)
 Node.js很多对象都继承自EventEmitter，比如stream、socket等。
 
 上面说的是，JavaScript原生环境API实现的观察者模式，基本上就是实现EventEmitter接口。类似地，在QT中，有一种signal/slot机制用于事件处理，通过`connect(signal, slot)`这样的代码把signal和slot关联在一起。PhosphorJS实现了一条类似的API，而且提供了几个特别的API：
-```
+```js
  disconnectBetween(sender: any, receiver: any):void
  disconnectSender(sender: any):void
  disconnectReceiver(receiver: any):void
