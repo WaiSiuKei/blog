@@ -32,4 +32,4 @@ Node.js很多对象都继承自EventEmitter，比如stream、socket等。
  disconnectReceiver(receiver: any):void
  disconnectAll(object: any):void
  ```
- 在现在类似IDEd的layout，处理拖拽组件和布局容器的关系时，👆的方法能快速取消signal和slot的关联关系，而且在组件销毁时，也能方便地进行回收处理。平时开发常用的EventEmitter因为忘记取消回调而发生内存泄漏的人为错误挺多的，实现自己的EventEmitter时，有必要参考PhosphorJS的设计。
+ 在现在类似IDE的layout，处理拖拽组件和布局容器的关系时，👆的方法能快速取消signal和slot的关联关系，而且在组件销毁时，也能方便地进行回收处理。平时开发常用的EventEmitter因为忘记取消回调而发生内存泄漏的人为错误挺多的，实现自己的EventEmitter时，有必要参考PhosphorJS的设计。
