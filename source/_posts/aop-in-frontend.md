@@ -4,7 +4,7 @@ date: 2019-05-12 22:11:30
 tags: 技术
 ---
 
-Javad的Spring框架有两个核心的概念IoC和AOP。我之前写的文中，提到了我在现有项目用了IoC解决循环依赖。而AOP这一个编程范式，再现在的项目中也有使用。使用AOP，可以在不改动原来代码的前提下，对现有类的方法进行增强，从而实现更多的功能。
+Java的Spring框架有两个核心的概念IoC和AOP。我之前写的文中，提到了我在现有项目用了IoC解决循环依赖。而AOP这一个编程范式，再现在的项目中也有使用。使用AOP，可以在不改动原来代码的前提下，对现有类的方法进行增强，从而实现更多的功能。
 
 Java的AOP是通过`@`注解进行的（还有一系列XML配置），类似地，JavaScript里也有[proposal-decorators](https://github.com/tc39/proposal-decorators)，可以使用一模一样的代码写法。JavaScript里的装饰器`@`，可以对类和类方法进行装饰。我目前使用的装饰器语法是legacy的，使用@babel/plugin-proposal-decorators时，需要开启legacy选项，新的proposal比我认知中的功能多了好多东西。
 
