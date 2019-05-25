@@ -1,5 +1,5 @@
 ---
-title: 键盘输入
+title: AltGr和Dead Key
 date: 2019-05-25 16:15:20
 tags: 技术
 ---
@@ -46,7 +46,6 @@ Modifier key可以和Character key组合输出，比如
 ```
 具体可以看[维基关于AltGr的介绍](https://en.wikipedia.org/wiki/AltGr_key)。
 
-Dead Key这个也和欧洲语言有关，比如法文字母à这种衍生拉丁字母，上面的`代表变音的符号，需要用Dead Key来输入。
-具体可以看[维基关于Dead Key的介绍](https://en.wikipedia.org/wiki/Dead_key)。
+Dead Key这个也和欧洲语言有关，比如法文字母à这种衍生拉丁字母，上面的`代表变音的符号，需要用Dead Key来输入。具体可以看[维基关于Dead Key的介绍](https://en.wikipedia.org/wiki/Dead_key)。
 
 考虑到我写的软件只面向国内用户，最多最多再放放Github，这AltGr和Dead Key就不深入研究了。
