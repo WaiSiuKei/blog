@@ -9,9 +9,9 @@ tags: 技术
 - *keypress：当一个键按下，且这个键产生一个字符值时，浏览器才会发送keypress事件。比如字母键、数字键，标点符号；Alt, Shift, Ctrl这些键敲击后不会有keypress事件。
 - keyup： 任意按键释放后。
 
-keydown/keyup适合用来用来处理键盘敲击事件。keypress适合用来处理内容输入事件。查一下最新的Draft, keypress已经算是legacy了，要替换为beforeinput和input。
+keydown/keyup适合用来用来处理键盘敲击事件。keypress适合用来处理内容输入事件。查一下最新的[Draft](https://w3c.github.io/uievents/#legacy-keyboardevent-events), keypress已经算是legacy了，要替换为beforeinput和input。
 # 输入识别
-先来看看KeyboardEvent的接口定义（源自Typescript）：
+先来看看KeyboardEvent的接口定义（源自lib.dom.d.ts）：
 ```ts
 interface KeyboardEvent extends UIEvent {
     readonly altKey: boolean;
