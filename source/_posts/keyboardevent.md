@@ -53,7 +53,7 @@ interface KeyboardEvent extends UIEvent {
  比如单纯按下a键, keydown会是`{ key: 'a', code: 'keyA' }`。
 
  比较麻烦的是和modifier一起按下是，hold住Alt再按下a键时，keydown会是`{ key: 'å', code: 'keyA' }`。
- 
+
  更加麻烦的是，切换到中文输入法下，输入`啊`这个字，一般的顺序是a然后空格，事件顺序是:
 |    | event   | keycode | key | code  |
 |----|---------|---------|-----|-------|
@@ -62,6 +62,8 @@ interface KeyboardEvent extends UIEvent {
 | 3  | keydown | 229     | 空  | Space |
 | 4  | keyup   | 32      | 空  | Space |
 keydown出现一个keycode=229的神秘代码，这是一个经典问题。这时keypress事件是不会发送的，想要获得中文输入值，需要处理InputEvent。
+
+（👆的表格，我是在[https://w3c.github.io/uievents/tools/key-event-viewer.html](https://w3c.github.io/uievents/tools/key-event-viewer.html)里测试后得到的）
 
 
 
