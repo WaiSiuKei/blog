@@ -51,3 +51,4 @@ info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this comm
 
 ## dts-bundle-generator的坑
 dts-bundle-generator即使按上面的 Lerna + Yarn workspace 搭建后，还会出现声明内联的情况，试了好久，加了Path mapping倒是可以解决问题，但是不太好，因为在使用Path mapping时，WebStrom的自动import太傻，如果里面有自身目录，同一模块下个两个文件间import，居然不是使用相对路径，而是`pkg-name/src/path/to/file`，这样的形式。
+更新一下，给作者提了[Issue](https://github.com/timocov/dts-bundle-generator/issues/91)后，作者给出一个用来处理这种情况的配置项，所以Path mapping可以去掉。
