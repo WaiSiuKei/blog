@@ -11,16 +11,14 @@ script:
 after_script:
   - cp googlee736c0dd9c0ecb13.html ./public/googlee736c0dd9c0ecb13.html
   - cd ./public
-  - git init
   - git config --global user.name "waisiukei"
   - git config --global user.email "wakiki@outlook.com"
+  - git init
   - git add .
   - git commit -m "Update"
-  - git push --force --quiet "https://${GitHub_token}@${GH_REF}" master:master
+  - git remote add origin https://${GH_TOKEN}@github.com/WaiSiuKei/waisiukei.github.io.git
+  - git push --quiet --set-upstream origin master
 
 branches:
   only:
     - master
-env:
- global:
-   - GH_REF: github.com/WaiSiuKei/waisiukei.github.io.git
